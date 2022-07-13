@@ -1,0 +1,67 @@
+.product-list {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.btn {
+  background-color: burlywood;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  transition: .1s linear;
+}
+
+.btn:hover {
+  background-color: rgb(176, 141, 95);
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.form-preview {
+  text-align: center;
+  margin: .1rem auto;
+}
+
+.form-preview:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn-add {
+  width: 100%;
+  background-color: lightblue;
+  transition: .1s linear;
+  border: 1px solid transparent;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+  background-color: lightsteelblue;
+}
+
+.form-full {
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  display: flex;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.btn-search {
+  background-color: green;
+  margin-left: .5rem;
+  border: 1px solid transparent;
+  color: wheat;
+  transition: .1s linear;
+}
+
+.btn-search:hover {
+  background-color: rgb(2, 99, 2);
+  cursor: pointer;
+  border: 1px solid black;
+  color: white;
+}

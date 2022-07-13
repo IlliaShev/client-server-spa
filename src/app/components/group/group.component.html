@@ -1,1 +1,17 @@
-<button (click)="onClick()">Click</button>
+<div class="accordion">
+  <div class="accordion-preview">
+    <p class="name" (click)="showFullInfo()">{{group.name}}</p>
+    <button class="btn-delete" title="Видалити групу товарів" (click)="deleteGroup()"><mat-icon aria-hidden="false" aria-label="Example home icon" class="icon">delete</mat-icon></button>
+  </div>
+  <div class="accordion-full" [@full-info]="state">
+    <form [formGroup]="form" (submit)="submitForm()">
+      <p class="label">Назва групи товарів</p>
+      <input formControlName="name"/>
+      <p class="label">Опис групи товарів</p>
+      <textarea formControlName="description">
+      </textarea>
+      <button class="save-button" [disabled]="!form.valid">Зберегти</button>
+      <button class="go-to-products" [routerLink]="['/', group.id]">Перейти до переліку товарів</button>
+    </form>
+  </div>
+</div>

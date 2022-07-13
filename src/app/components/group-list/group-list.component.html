@@ -1,1 +1,25 @@
-<p>group-list works!</p>
+<div class="group">
+  <app-header [headerText]="'Перелік груп товарів'"></app-header>
+  <div class="accordion form-group">
+    <div class="accordion-preview form-group-preview" (click)="showFormAddGroup()">
+      Додавання групи товарів
+    </div>
+    <div class="accordion-full form-group-full" [@full-info]="state">
+      <form [formGroup]="form">
+        <input placeholder="Назва групи" formControlName="name"/>
+        <textarea placeholder="Опис групи" formControlName="description"></textarea>
+        <button class="btn-add" [disabled]="!form.valid" (click)="addGroup()">Додати групу</button>
+      </form>
+    </div>
+  </div>
+  <mat-spinner *ngIf="loading; else groupList"></mat-spinner>
+  <ng-template #groupList>
+    <div class="course-list">
+      <button class="all-products" [routerLink]="['/all']">Переглянути всі продукти</button>
+      <div class="cost-total">
+        Товару можна вкрасти на суму аж {{costTogether}}
+      </div>
+      <app-group *ngFor="let group of groups" [group]="group" class="group-item"></app-group>
+    </div>
+  </ng-template>
+</div>

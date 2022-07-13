@@ -1,0 +1,25 @@
+<div class="product-list">
+  <app-header [headerText]="'Список продуктів'"></app-header>
+  <button class="btn" [routerLink]="['/']">Повернутися до списку груп</button>
+  <div class="accordion">
+    <div class="accordion-preview form-preview" (click)="showFormAddProduct()">Додати продукт</div>
+    <div class="accordion-full form-full" [@full-info]="state">
+      <form [formGroup]="form">
+        <input placeholder="Назва продукту" formControlName="name"/>
+        <textarea placeholder="Опис продукту" formControlName="description"></textarea>
+        <input placeholder="Виробник продукту" formControlName="vendor"/>
+        <input placeholder="Ціна продукту" type="number" formControlName="price"/>
+        <input placeholder="Кількість продукту" type="number" formControlName="count"/>
+        <input placeholder="Група продукту" formControlName="groupName"/>
+        <button class="btn-add" [disabled]="!form.valid" (click)="addProduct()">Додати продукт</button>
+      </form>
+    </div>
+  </div>
+  <div class="search">
+      <input placeholder="Пошук продукту за назвою" [(ngModel)]="search">
+      <button class="btn-search" (click)="searchProducts()">Шукати</button>
+  </div>
+  <div class="products">
+    <app-product *ngFor="let product of products" [product]="product"></app-product>
+  </div>
+</div>

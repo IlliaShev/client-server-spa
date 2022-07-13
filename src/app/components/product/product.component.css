@@ -1,0 +1,27 @@
+.label {
+  font-size: 1rem;
+  margin: .2rem 1rem;
+  padding-left: 1rem;
+  text-decoration: underline;
+}
+
+.count {
+  max-width: 80px;
+  margin-right: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.green {
+  background-color: green;
+  margin-right: .2rem;
+}
+
+.yellow {
+  background-color: brown;
+  margin-right: 2rem;
+}

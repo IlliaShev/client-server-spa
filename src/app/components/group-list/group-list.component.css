@@ -1,0 +1,66 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.all-products {
+  background-color: rgb(23, 149, 23);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.all-products:hover {
+  cursor: pointer;
+  background-color: rgb(3, 103, 3);
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group-preview {
+  text-align: center;
+  cursor: pointer;
+  margin: .1rem auto;
+}
+
+.form-group-preview:hover {
+  text-decoration: underline;
+}
+
+.form-group-full {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-add {
+  width: 100%;
+  background-color: lightblue;
+  transition: .1s linear;
+  border: 1px solid transparent;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+  background-color: lightsteelblue;
+}
+
+.group-item {
+  margin: .2rem 0;
+  width: 100%;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost-total {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 1rem;
+  font-weight: 500;
+}
